@@ -153,6 +153,7 @@ const Signup = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
         <Input
+          type="email"
           placeholder="Enter Your Email"
           onChange={(e) => setEmail(e.target.value)}
         />

@@ -1,6 +1,6 @@
 export const getSender = (loggedUser, users) => {
   return users[0]._id === loggedUser._id ? users[1].name : users[0].name;
-};
+}; //one on one chat consists of two users one is the logged in user and the other is the sender
 
 export const getSenderFull = (loggedUser, users) => {
   return users[0]._id === loggedUser._id ? users[1] : users[0];

@@ -95,6 +95,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.post("/api/chat", { userId }, config);
+      console.log(data);
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
       setLoadingChat(false);
@@ -141,8 +142,8 @@ const SideDrawer = () => {
               />
               <BellIcon fontSize={"2xl"} margin={"1"} />
             </MenuButton>
-            <MenuList pl="2px">
-              {!notifications && "No New Messages"}
+            <MenuList pl="3px">
+              {!notifications.length && " No New Messages"}
               {notifications.map((notif) => (
                 <MenuItem
                   key={notif._id}

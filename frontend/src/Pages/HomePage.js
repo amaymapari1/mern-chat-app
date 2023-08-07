@@ -27,6 +27,7 @@ const HomePage = () => {
       <Box
         d="flex"
         p={3}
+        justifyContent="center"
         textAlign="center"
         bg={"white"}
         w="100%"
